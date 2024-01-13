@@ -1,17 +1,19 @@
 .navbar{
-height: 100px;
-// background-color: aqua;
-}
 
+// background-color: aqua;
 .social{
     display: flex;
     align-items: center;
-    margin-left: 80%;
-    display: flex;
-    gap: 20px;
-    // background-color: aqua;
+    margin-top: 0%;
+    float: right;
+     display: flex;
+     gap: 20px;
+   background-color: aqua;
     height: 100%;
 }
+}
+
+
 
 img{
     width: 30px;

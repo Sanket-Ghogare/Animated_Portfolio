@@ -1,0 +1,36 @@
+
+.heros {
+    // height: calc(100vh - 100px);
+    overflow: hidden;
+    background: linear-gradient(360deg, #0c0c1d, #111132);
+    // position: relative;
+
+    .wrapper{
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .textContainer{
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .imageContainers {
+        height: 100%;
+        width: 80%;
+        position:absolute;
+       margin-top: 80px;
+       margin-left: 700px;
+    }
+
+    img{
+        width: 400px;
+        height: 400px;
+        
+    }
+    
+}

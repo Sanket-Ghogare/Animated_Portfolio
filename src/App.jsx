@@ -5,6 +5,7 @@ import Navbar from './componenets/Navbar/Navbar';
 import Contact from './componenets/Navbar/Contact';
 import Test from './componenets/Navbar/Test';
 import Sidebar from './componenets/Navbar/sidebar/Sidebar';
+import Services from './componenets/Services';
 const App = () =>{
 return (
 <>
@@ -15,18 +16,26 @@ return (
     </section>
     
 <Sidebar/>
-    <section id= 'Services'>Parallax</section>
-    <section ></section>
-    <section id='Portfolio' >port1</section>
-    <section className='section'>
-       <Test/>
+    {/* <section id= 'Services'>Parallax</section> */}
+    <section id ='Services'>
+<Services/>
     </section>
-    <section id='Contact'>
-    <Contact/>
+     <section id='Portfolio' >port1</section>
 
+   
+{/*     
+     <section id ='Test'>
+<Test/>
+    </section>  */}
+
+<section id ='Contact'>
+<Contact/>
     </section>
+
     
-    {/* <Test/> */}
+    <section id = 'About'>
+       About
+    </section>
   </div>
     </>
 )

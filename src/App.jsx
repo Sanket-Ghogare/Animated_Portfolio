@@ -54,6 +54,8 @@ import Test from './componenets/Navbar/Test';
 import Sidebar from './componenets/Navbar/sidebar/Sidebar';
 import Services from './componenets/Services';
 import Parallax from './componenets/Parallax';
+import Portfolio from './componenets/portfolio/Portfolio';
+
 const App = () =>{
 return (
 <>
@@ -74,6 +76,8 @@ return (
    </section>
 
    <section className='abc'></section>
+
+    <Portfolio/>
 
     <section id='Contact'>
     <Contact/>

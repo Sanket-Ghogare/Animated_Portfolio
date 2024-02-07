@@ -1,17 +1,33 @@
 import "./heros.scss"
+import {motion }  from "framer-motion";
 
-// textvarients = {
+const textvarients = {
+  initial:{
+    x:-500,
+    opacity:0,
+
+  },
+  animate:{
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+
+};
+
+// const slidevarients = {
 //   initial:{
-//     x:-500,
-//     opacity:0,
+//     x: 0,
 
 //   },
 //   animate:{
-//     x: 0,
-//     opacity:1,
-//     transition:{
-//       duration: 1,
-//       staggerChildren: 0.1,
+//     x: "220%",
+//     transition: {
+//     repeat: Infinity,
+//     duration: 13,
 //     },
 //   },
 
@@ -21,25 +37,29 @@ const Heros = () => {
    <>
     <div className="heros">
       <div className="wrapper">
-     
+      
       </div>
       <div className="slidingtext">
-        Coder an
+        CodeNinj
         </div>
         <div className="imageContainers">
             <img src="/hero.png"/>
         </div>
     </div>
-    <div className="textContainer">
-    <h6>Ghogare Sanket</h6>
-        <h1>Web Developer<br/> and UI Designer</h1>
+    <motion.div className="textContainer"
+    variants={textvarients}
+    initial='initial'
+    animate= "animate"
+    >
+    <motion.h6 variants={textvarients}>Ghogare Sanket</motion.h6>
+        <motion.h1 variants={textvarients}>Web Developer<br/> and UI Designer</motion.h1>
        
-        <div className="buttons">
-          <button className="btn">See the latest Work</button>
-          <button className="btn">Contact Me</button>
-        </div>
+        <motion.div className="buttons" variants={textvarients}>
+          <motion.button className="btn" variants={textvarients}>See the latest Work</motion.button>
+          <motion.button className="btn"  variants={textvarients}>Contact Me</motion.button>
+        </motion.div>
        
-      </div>
+      </motion.div>
     </>
   )
 }

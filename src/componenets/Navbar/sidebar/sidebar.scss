@@ -13,7 +13,7 @@
         bottom: 0;
         background: white;
         width: 300px;
-
+        z-index: 999;
         .links{
         position: absolute;
         width: 100%;
@@ -23,6 +23,7 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+      
 a{
     font-size: 40px;
 }
@@ -40,6 +41,7 @@ a{
             background-color: transparent;
             border: none;
             cursor: pointer;
+            z-index: 999;
 
         }
 

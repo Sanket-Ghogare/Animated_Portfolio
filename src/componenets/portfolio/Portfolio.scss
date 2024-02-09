@@ -22,7 +22,8 @@
         justify-content: center;
         height: 100%;
         width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
+        justify-items: auto;
 
         .wrapper {
             max-width: 1366px;

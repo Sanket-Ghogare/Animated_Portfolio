@@ -9,6 +9,7 @@
         text-align: center;
         color: orange;
         font-size: 35px;
+        // margin-left: 22rem;
 
         .progressBar {
             height: 10px;
@@ -22,8 +23,8 @@
         justify-content: center;
         height: 100%;
         width: 100%;
-        // overflow: hidden;
-        justify-items: auto;
+        overflow: hidden;
+        // justify-items: auto;
 
         .wrapper {
             max-width: 1366px;
@@ -51,7 +52,7 @@
 
             .imageContainer {
                 flex: 1;
-                max-width: 50%;
+                max-width: 40%;
                 img {
                     width: 100%;
                     height: auto;

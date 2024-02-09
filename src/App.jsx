@@ -35,31 +35,28 @@ return (
     <section id='Portfolio'>
     <Portfolio type= 'portfolio'/>
    </section>
-<section id='Portfolio'>
+{/* <section id='Portfolio'>
   <Portfolio type="portfolio"/>
-</section>
-   {/* <section className='About'>
-   <Portfolio/>
+</section> */}
+   {/* <section id='new'>
+   dcdf
    </section> */}
 
     
+ 
+     {/* <section id='Contact'>
+    <Contact type= 'Contact'/>
 
-    {/* <section id='Contact'>
-    <Contact/>
+    </section>  */}
 
-    </section> */}
-    {/* <section id='Portfolio' ></section>
+     
+{/* 
     <section className='section'>
        <Test/>
-    </section>
-    <section id='Contact'>
-    <Contact/>
-
     </section> */}
-    
-    {/* <Test/> */}
-    {/* <Portfolio/> */}
+  
   </div>
+
     </>
 )
   

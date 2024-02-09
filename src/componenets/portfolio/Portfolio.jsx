@@ -6,7 +6,7 @@ const items = [
     {
         id:1, 
         title:"React Js",
-        img:"https://images.pexels.com/photos/102061/pexels-photo-102061.jpeg?auto=compress&cs=tinysrgb&w=600",
+        img:"https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=600",
         desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus veniam dolor doloribus amet, sed, quasi velit dolorum corrupti, esse consequuntur?"
 
     },
@@ -31,14 +31,36 @@ const items = [
         desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus veniam dolor doloribus amet, sed, quasi velit dolorum corrupti, esse consequuntur?"
 
     },
+    {
+        id:5, 
+        title:"CSS",
+        img:"https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+        desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus veniam dolor doloribus amet, sed, quasi velit dolorum corrupti, esse consequuntur?"
+
+    },
+    {
+        id:5, 
+        title:"CSS",
+        img:"https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+        desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus veniam dolor doloribus amet, sed, quasi velit dolorum corrupti, esse consequuntur?"
+
+    },
+    {
+        id:5, 
+        title:"CSS",
+        img:"https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+        desc:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ducimus veniam dolor doloribus amet, sed, quasi velit dolorum corrupti, esse consequuntur?"
+
+    },
 ];
 
 const Single = ({item}) => 
     {
+    const ref=useRef();
 
-        const ref=useRef();
-
-    const {scrollYProgress} = useScroll({target: ref});
+    const {scrollYProgress} = useScroll({
+    target: ref
+});
 
     const y = useTransform(scrollYProgress,[0,1],[-300, 300]);
 
@@ -49,11 +71,11 @@ const Single = ({item}) =>
                     <div className="imageContainer">
                 <img src={item.img} alt="" />
                 </div>
-                <motion.div className="textContainer" style={{y}}>
+                <div className="textContainer" style={{y}}>
                     <h2>{item.title}</h2>
                     <p>{item.desc}</p>
                     <button>See Demo</button>
-                </motion.div>
+                </div>
                 
                 </div>
             </div>

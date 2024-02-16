@@ -1,6 +1,7 @@
+
+
 .portfolio {
     position: relative;
-
     .progress {
         position: sticky;
         top: 0;
@@ -18,12 +19,14 @@
     }
 
     .container {
+
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
         width: 100%;
         overflow: hidden;
+       
         // justify-items: auto;
 
         .wrapper {
@@ -95,61 +98,214 @@
 
 
 
-@media (min-width: 370px) and (max-width: 390px) {
-    .portfolio {
-      .progress {
-        padding-top: 30px;
-        font-size: 30px;
-  
-        .progressBar {
-          margin-top: 15px;
-        }
-      }
-  
-      .container {
-        flex-direction: column;
-  
-        .wrapper {
-          flex-direction: column;
-           margin-top: 10%;
-           margin-bottom: 10%;
-          .imageContainer,
-          .textContainer {
-            width: 140%; 
-            max-width: none;
-         
-            img {
-              width: 100%;
-              height: 90%;
-              margin-bottom: 5%;
+@media (min-width: 360px) and (max-width: 370px) {
 
-            }
-          }
-  
-          .textContainer {
-            margin-top: 15px;
-  
-            h2 {
-              font-size: 10px;
-              margin-bottom: 5px; 
-  
-            p {
-              font-size: 7px;
-              margin-bottom: 10px; 
-            }
-  
-            button {
-              padding: 10px 20px;
-            }
-          }
-        }
+  .portfolio
+  { 
+    .progress{
+      h1{
+        margin-top: 6%;
+        font-size: 40px;
+        font-weight: 700;
       }
     }
+    .container .wrapper {
+    flex-direction: column;
+    
+    .imageContainer,
+    .textContainer {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 90%;
+        margin-bottom: 5%;
+      }
+    }
+
+    .textContainer {
+      margin-top: -60%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      h2 {
+       
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size:20px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 20px 20px;
+        width: 100%;
+        
+      }
+    }
+    }
   }
+
+}
+
+@media (min-width: 370px) and (max-width: 390px) {
+  .portfolio
+  { 
+    .progress{
+      h1{
+        margin-top: 6%;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    .container .wrapper {
+    flex-direction: column;
+    
+    .imageContainer,
+    .textContainer {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 90%;
+        margin-bottom: 5%;
+      }
+    }
+
+    .textContainer {
+      margin-top: -60%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      h2 {
+       
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size:20px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 20px 20px;
+        width: 100%;
+        
+      }
+    }
+    }
+  }
+
+}
+
+
+@media (min-width:390px) and (max-width:400px){
+  .portfolio
+  { 
+    .progress{
+      h1{
+        margin-top: 6%;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    .container .wrapper {
+    flex-direction: column;
+    
+    .imageContainer,
+    .textContainer {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 90%;
+        margin-bottom: 5%;
+      }
+    }
+
+    .textContainer {
+      margin-top: -60%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      h2 {
+       
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size:20px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 20px 20px;
+        width: 100%;
+        
+      }
+    }
+    }
+  }
+
 }
 
 @media (min-width:400px) and (max-width:420px){
 
+  .portfolio
+  { 
+    .progress{
+      h1{
+        margin-top: 6%;
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+    .container .wrapper {
+    flex-direction: column;
+    
+    .imageContainer,
+    .textContainer {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 90%;
+        margin-bottom: 5%;
+      }
+    }
+
+    .textContainer {
+      margin-top: -60%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      h2 {
+       
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size:20px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 20px 20px;
+        width: 100%;
+        
+      }
+    }
+    }
+  }
 
 }
 

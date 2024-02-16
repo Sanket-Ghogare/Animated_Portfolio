@@ -38,10 +38,10 @@ return (
     <Portfolio type= 'portfolio'/>
    </section>
 
-   {/* <section id='Contact'>
+   <section id='Contact'>
     <Contact type= 'Contact'/>
 
-    </section> */}
+    </section>
 
 
 

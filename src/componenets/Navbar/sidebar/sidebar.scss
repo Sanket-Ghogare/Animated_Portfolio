@@ -49,6 +49,20 @@ a{
    
 }
 
+@media (min-width:360px) and (max-width:370px){
+    .sidebar{
+       
+        .bg {
+            width:58% ;
+             .links{
+                a{
+                font-size: 30px;
+                }
+             }   
+            }
+    }
+}
+
 @media (min-width:370px) and (max-width:390px){
     .sidebar{
        
@@ -63,7 +77,20 @@ a{
     }
    
 }
+@media (min-width:390px) and (max-width:400px){
+    .sidebar{
+       
+        .bg {
+            width:63% ;
+             .links{
+                a{
+                font-size: 30px;
+                }
+             }   
+            }
+    }
 
+}
 
 @media (min-width:400px) and (max-width:420px){
     .sidebar{

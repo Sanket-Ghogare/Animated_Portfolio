@@ -48,6 +48,25 @@ section{
 //     };
 // }
 
+
+
+
+@media (min-width:360px) and (max-width:370px){
+    #Services{
+       height: 100%;
+    }
+    
+    #homePage{
+        margin-bottom:5%;
+    }
+
+    #Contact{
+        margin-top:0%;
+    }
+    
+
+}
+
 @media (min-width:370px) and (max-width:390px){
     #Services{
        height: 100%;
@@ -63,6 +82,22 @@ section{
     
 
 }
+
+@media (min-width:390px) and (max-width:400px){
+
+    #Services{
+        height: 100%;
+     }
+     
+     #homePage{
+         margin-bottom:5%;
+     }
+ 
+     #Contact{
+         margin-top:0%;
+     }
+}
+
 
 @media (min-width:400px) and (max-width:420px){
 

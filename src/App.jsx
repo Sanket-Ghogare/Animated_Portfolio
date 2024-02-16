@@ -34,14 +34,14 @@ return (
 </section>
 
 
-    <section id='Portfolio'>
+    {/* <section id='Portfolio'>
     <Portfolio type= 'portfolio'/>
-   </section>
+   </section> */}
 
-   {/* <section id='Contact'>
+   <section id='Contact'>
     <Contact type= 'Contact'/>
 
-    </section> */}
+    </section>
 
 
 

@@ -19,8 +19,19 @@ img{
 
 }
 
+@media (min-width:360px) and (max-width:370px){
+    .navbar{
+        margin-right: 3%;
+    }
+}
 
 @media (min-width:370px) and (max-width:390px){
+    .navbar{
+        margin-right: 3%;
+    }
+}
+
+@media (min-width:390px) and (max-width:400px){
     .navbar{
         margin-right: 3%;
     }

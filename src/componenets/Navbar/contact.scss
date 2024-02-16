@@ -61,6 +61,66 @@ span{
 
 }
 
+
+@media (min-width:360px) and (max-width:370px){
+    .contact{
+        flex: none;
+        flex-direction: column;
+        .form{
+            margin-top: 10%;
+            margin-left: 20px;
+            .phone{
+                svg{
+                    width:250px ;
+                    height: 300px;
+                    margin-left:-20%;
+                }
+            }
+           .text{
+            width: 120%;
+            height: 45px;
+            margin-left: -15%;
+            margin-bottom: 30px;
+    
+           }
+           .btn{
+            width: 120%;
+            height: 40px;
+            margin-left: -15%;
+         
+           }
+        }
+        .textarea{
+            .h1{
+                font-size: 35px;
+                margin-top: 23%;
+                br{
+                    display: none;
+                }
+            }
+            .item{
+                align-items: center;
+                h2{
+                    align-items: center;
+                    font-size: 20px;
+                    margin-left: 110px;
+                    margin-bottom: 3%;
+                }
+                span{
+                    margin-left: 30px;
+                }
+                .span1{
+                    margin-left: 68px;
+                }
+                .span2{
+                    margin-left:95px;
+                }
+            }
+        }
+    }
+    
+    }
+
 @media (min-width:370px) and (max-width:390px){
 .contact{
     flex: none;
@@ -119,6 +179,67 @@ span{
 }
 
 }
+
+@media (min-width:390px) and (max-width:400px){
+    .contact{
+        flex: none;
+        flex-direction: column;
+        .form{
+            margin-top: 10%;
+            margin-left: 20px;
+            .phone{
+                svg{
+                    width:250px ;
+                    height: 300px;
+                    margin-left:-20%;
+                }
+            }
+           .text{
+            width: 120%;
+            height: 45px;
+            margin-left: -15%;
+            margin-bottom: 30px;
+    
+           }
+           .btn{
+            width: 120%;
+            height: 40px;
+            margin-left: -15%;
+         
+           }
+        }
+        .textarea{
+            .h1{
+                font-size: 35px;
+                margin-top: 23%;
+                br{
+                    display: none;
+                }
+            }
+            .item{
+                align-items: center;
+                h2{
+                    align-items: center;
+                    font-size: 20px;
+                    margin-left: 110px;
+                    margin-bottom: 3%;
+                }
+                span{
+                    margin-left: 30px;
+                }
+                .span1{
+                    margin-left: 68px;
+                }
+                .span2{
+                    margin-left:95px;
+                }
+            }
+        }
+    }
+    
+
+}
+
 @media (min-width:400px) and (max-width:420px){
 
     .contact{

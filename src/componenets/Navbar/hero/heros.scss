@@ -16,13 +16,20 @@
     .imageContainers {
         height: 100%;
         // width: 80%;
+        width: 400px;
         position:absolute;
        margin-top: 120px;
        margin-left: 850px;
+
+    //    @include mobile{
+    //     margin-left:3%;
+    //     margin-top: 130%;
+        
+    //    }
     }
 
     img{
-        width: 500px;
+        width: 400px;
         height: 500px;
         
     }
@@ -41,6 +48,7 @@
     margin-top: 20px;
     // background-color:red;
    font-size: xx-large;
+
 
    .buttons{
     display: flex;
@@ -74,4 +82,80 @@
     margin-top: 220px;
     white-space: nowrap;
     color: #ffffff09;
+    
 }
+
+@media (min-width:370px) and (max-width:390px){
+.heros{
+    .imageContainers{
+        // margin-left:3%;
+        // margin-top: 140%;
+        display: none;
+    }
+    img{
+        // width: 300px;
+        // margin-left: 5%;
+        // height: 350px;
+        display: none;
+    }
+
+}
+.textContainer{
+    margin-top: 15%;
+    margin-left:-15%;
+   padding: 30%;
+   
+
+   .buttons{
+    width: 140%;
+     margin-left:3%;
+    .btn{
+        padding: 15px;
+
+    }
+  
+   }
+}
+.slidingtext{
+    display: none;
+}
+
+}
+
+
+@media (min-width:400px) and (max-width:410px){
+    .heros{
+        .imageContainers{
+            // margin-left:3%;
+            // margin-top: 140%;
+            display: none;
+        }
+        img{
+            // width: 300px;
+            // margin-left: 5%;
+            // height: 350px;
+            display: none;
+        }
+    
+    }
+    .textContainer{
+        margin-top: 15%;
+        margin-left:-5%;
+       padding: 30%;
+       
+    
+       .buttons{
+        width: 160%;
+         margin-left:-5%;
+        .btn{
+            padding: 15px;
+    
+        }
+      
+       }
+    }
+    .slidingtext{
+        display: none;
+    }
+    
+    }

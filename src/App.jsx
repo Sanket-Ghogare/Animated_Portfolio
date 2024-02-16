@@ -16,11 +16,12 @@ return (
 <div>
     <section id='homePage'>
       <Navbar/> 
+     
        <Heros/>
     </section>
     
 <Sidebar/> 
-<section>
+<section className='p1'>
       <Parallax type ="services"/>
     </section>
 <section id='Services'>
@@ -28,26 +29,26 @@ return (
   
     </section>
    
-    {/* <section id= 'Services' style={{marginBottom:"30%" , marginTop:"0%"}}> <Services/></section> */}
-    <section>
+    <section className='p1'>
   <Parallax type="portfolio"/>
 </section>
+
+
     <section id='Portfolio'>
     <Portfolio type= 'portfolio'/>
    </section>
-{/* <section id='Portfolio'>
-  <Portfolio type="portfolio"/>
-</section> */}
-   {/* <section id='new'>
-   dcdf
-   </section> */}
+
+   {/* <section id='Contact'>
+    <Contact type= 'Contact'/>
+
+    </section> */}
+
+
+
 
     
  
-     {/* <section id='Contact'>
-    <Contact type= 'Contact'/>
-
-    </section>  */}
+       
 
      
 {/* 

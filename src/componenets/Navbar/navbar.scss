@@ -1,6 +1,5 @@
 .navbar{
 
-// background-color: aqua;
 .social{
     display: flex;
     align-items: center;
@@ -8,7 +7,6 @@
     float: right;
      display: flex;
      gap: 20px;
-//    background-color: aqua;
     height: 100%;
     padding-top:2% ;
     padding-right: 2%;
@@ -22,7 +20,16 @@ img{
 }
 
 
-
+@media (min-width:370px) and (max-width:390px){
+    .navbar{
+        margin-right: 3%;
+    }
+}
+@media (min-width:400px) and (max-width:420px){
+    .navbar{
+        margin-right: 3%; 
+    }
+}
 
 .wrapper{
     margin-left: 20%;

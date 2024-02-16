@@ -71,7 +71,9 @@ const Single = ({item}) =>
                     <div className="imageContainer">
                 <img src={item.img} alt="" />
                 </div>
+                <br/>
                 <div className="textContainer" style={{y}}>
+                    
                     <h2>{item.title}</h2>
                     <p>{item.desc}</p>
                     <button>See Demo</button>

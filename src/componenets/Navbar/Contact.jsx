@@ -1,7 +1,7 @@
 import React ,{useRef , useState} from 'react'
 import './contact.scss'
 import emailjs from '@emailjs/browser';
-import { motion ,useInView} from "framer-motion";
+import { delay, motion ,useInView} from "framer-motion";
 const varients={
   inital:{
   y:500,
@@ -22,12 +22,12 @@ const Contact = () => {
   const formRef=useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  // const [Fresh , setFresh]=useState([]);
   const isInView = useInView(ref, { margin: "-100px" });
   
   const sendEmail=(e)=>{
     e.preventDefault();
-
+    
     emailjs
     .sendForm(
       "service_bn25gvh",
@@ -38,14 +38,24 @@ const Contact = () => {
     .then(
       (result) => {
         setSuccess(true)
+     
+        formRef.current.reset();
+          
+           setSuccess(false);
+      
       },
       (error) => {
         setError(true);
       }
     );
+   
   }
+
+
   return (
     <motion.div className='contact' ref={ref} varients={varients} initial="inital" whileInView="animate">
+   
+      
       <motion.div className='textarea'varients={varients}>
         <motion.h1 className='h1'varients={varients}>Let's work <br/>together</motion.h1>
      <motion.div className='item' varients={varients}>
@@ -54,18 +64,18 @@ const Contact = () => {
      </motion.div>
      <motion.div className='item' varients={varients}>
         <h2>Address</h2>
-        <span>Hello Street Bembale</span>
+        <span className='span1'>Hello Street Bembale</span>
      </motion.div>
      <motion.div className='item' varients={varients}>
         <h2>Phone</h2>
-        <span>8830027200</span>
+        <span className='span2'>8830027200</span>
      </motion.div>
       </motion.div>
-
+      
       <div className='form'>
         <motion.div
         className='phone' initial={{opacity:1}} whileInView={{opacity:0}} transition={{delay:3 , duration:1}}>
-          <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+          <svg className='svg' viewBox="0 0 32.666 32.666">
 
 
           <motion.path
@@ -113,8 +123,10 @@ transition={{ duration: 3 }}d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 
 
 
           </motion.div>
+          
+      
           <motion.form
-         
+        //  key={Date.now()}
           ref={formRef}
           onSubmit={sendEmail}
           initial={{ opacity: 0 }}
@@ -126,10 +138,13 @@ transition={{ duration: 3 }}d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 
         <textarea rows={8} className='text' placeholder='Message' name="message"/><br/>
         <button className='btn'>Submit</button>
         {error && "Error"}
-        {success && "Success"}
+        {success && "Sucess"}
         </motion.form>
+        
       </div>
+     
     </motion.div>
+     
   );
 };
 

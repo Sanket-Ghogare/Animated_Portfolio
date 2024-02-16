@@ -40,7 +40,7 @@ const Heros = () => {
       
       </div>
       <div className="slidingtext">
-        CodeNinj
+        Coders
         </div>
         <div className="imageContainers">
             <img src="/hero.png"/>

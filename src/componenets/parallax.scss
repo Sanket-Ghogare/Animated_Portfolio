@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  
     
     h1{
         font-style: 100px;
@@ -40,3 +41,29 @@
         z-index: 1;
     }
     }
+
+    
+@media (min-width:370px) and (max-width:390px){
+.parallax{
+.planets{
+background-size:contain;
+background-repeat: no-repeat;
+margin-bottom: 70%;
+width: 150%;
+}
+}
+}
+
+@media (min-width:400px) and (max-width:420px){
+    .parallax{
+        .planets{
+        background-size:contain;
+        background-repeat: no-repeat;
+        margin-bottom: 55%;
+         width: 150%;
+        }
+        
+        }
+
+}
+

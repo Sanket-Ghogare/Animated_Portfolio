@@ -25,6 +25,14 @@ section{
     scroll-snap-align: center;
    
 }
+#Services{
+
+    margin-bottom:5%;
+}
+
+#Contact{
+    margin-top:350%;
+}
 
 
 // .course{
@@ -39,3 +47,33 @@ section{
 //         background-color: white;
 //     };
 // }
+
+@media (min-width:370px) and (max-width:390px){
+    #Services{
+       height: 100%;
+    }
+    
+    #homePage{
+        margin-bottom:5%;
+    }
+
+    #Contact{
+        margin-top:0%;
+    }
+    
+
+}
+
+@media (min-width:400px) and (max-width:420px){
+
+    #Services{
+        height: 100%; 
+     }
+     
+    #homePage{
+        margin-bottom:5%;
+    } 
+    #Contact{
+        margin-top:0%;
+    }
+}

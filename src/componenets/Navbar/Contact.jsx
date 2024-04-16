@@ -1,5 +1,7 @@
 import React ,{useRef , useState} from 'react'
 import './contact.scss'
+
+
 import emailjs from '@emailjs/browser';
 import { delay, motion ,useInView} from "framer-motion";
 const varients={
@@ -27,13 +29,17 @@ const Contact = () => {
   
   const sendEmail=(e)=>{
     e.preventDefault();
+    // const SERVICEKEY = process.env.REACT_APP_SERVICEKEY;
+    // const TEMPLATEKEY= process.env.REACT_APP_TEMPLATEKEY;
+    // const KEY= process.env.REACT_APP_KEY;
     
     emailjs
     .sendForm(
-      "service_bn25gvh",
+     "service_bn25gvh",
       "template_d9q528i",
       formRef.current,
-      "aTU2AKHcfOn7qsKfL" 
+      "aTU2AKHcfOn7qsKfL",
+      
     )
     .then(
       (result) => {

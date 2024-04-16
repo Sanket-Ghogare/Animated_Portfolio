@@ -24,10 +24,11 @@ return (
 <section className='p1'>
       <Parallax type ="services"/>
     </section>
-<section id='Services'>
-    <Services type ="services"/>
-  
+    <section id='Contact'>
+    <Contact type= 'Contact'/>
+
     </section>
+
    
     <section className='p1'>
   <Parallax type="portfolio"/>
@@ -38,11 +39,11 @@ return (
     <Portfolio type= 'portfolio'/>
    </section>
 
-   <section id='Contact'>
-    <Contact type= 'Contact'/>
 
+   <section id='Services'>
+    <Services type ="services"/>
+  
     </section>
-
 
 
 

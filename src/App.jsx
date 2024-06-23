@@ -22,20 +22,20 @@ return (
     
 <Sidebar/> 
 <section className='p1'>
-      <Parallax type ="services"/>
+      <Parallax type ="Skills"/>
     </section>
-<section id='Services'>
-    <Services type ="services"/>
+<section id='Skills'>
+    <Services type ="Skills"/>
   
     </section>
    
     <section className='p1'>
-  <Parallax type="portfolio"/>
+  <Parallax type="Projects"/>
 </section>
 
 
-    <section id='Portfolio'>
-    <Portfolio type= 'portfolio'/>
+    <section id='Projects'>
+    <Portfolio type= 'Projects'/>
    </section>
 
    <section id='Contact'>

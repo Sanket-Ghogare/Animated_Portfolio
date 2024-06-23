@@ -43,7 +43,7 @@ const Heros = () => {
         Coders
         </div>
         <div className="imageContainers">
-            <img src="/hero.png"/>
+            {/* <img src="/hero.png"/> */}
         </div>
     </div>
     <motion.div className="textContainer"
@@ -51,7 +51,7 @@ const Heros = () => {
     initial='initial'
     animate= "animate"
     >
-    <motion.h6 variants={textvarients}>Ghogare Sanket</motion.h6>
+    <motion.h3 variants={textvarients}>Ghogare Sanket</motion.h3>
         <motion.h1 variants={textvarients}>Web Developer<br/> and UI Designer</motion.h1>
        
         <motion.div className="buttons" variants={textvarients}>

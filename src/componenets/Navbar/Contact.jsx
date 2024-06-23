@@ -60,15 +60,15 @@ const Contact = () => {
         <motion.h1 className='h1'varients={varients}>Let's work <br/>together</motion.h1>
      <motion.div className='item' varients={varients}>
         <h2>Mail</h2>
-        <span>akankshaspawar11@gmail.com</span>
+        <span>sanketvghogare@gmail.com</span>
      </motion.div>
      <motion.div className='item' varients={varients}>
         <h2>Address</h2>
-        <span className='span1'>Hello Street Bembale</span>
+        <span className='span1'>At-Ganeshwadi Po-Pimpri Tal-Indapur Dist-Pune</span>
      </motion.div>
      <motion.div className='item' varients={varients}>
         <h2>Phone</h2>
-        <span className='span2'>8830027200</span>
+        <span className='span2'>7028351913</span>
      </motion.div>
       </motion.div>
       

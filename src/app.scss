@@ -1,6 +1,7 @@
 html{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    
 }
 
 *{
@@ -22,4 +23,84 @@ a{
 section{
     height: 100vh;
     scroll-snap-align: center;
+   
+}
+#Services{
+
+    margin-bottom:5%;
+}
+
+#Contact{
+     margin-top:350%;
+}
+
+
+
+
+
+
+@media (min-width:360px) and (max-width:370px){
+    #Services{
+       height: 100%;
+    }
+    
+    #homePage{
+        margin-bottom:5%;
+    }
+
+    #Contact{
+        margin-top:950%;
+        margin-bottom: 10%;
+    }
+    
+
+}
+
+@media (min-width:370px) and (max-width:390px){
+    #Services{
+       height: 100%;
+    }
+    
+    #homePage{
+        margin-bottom:5%;
+    }
+
+    #Contact{
+        margin-top:950%;
+       margin-bottom: 10%;
+    }
+    
+
+}
+
+@media (min-width:390px) and (max-width:400px){
+
+    #Services{
+        height: 100%;
+     }
+     
+     #homePage{
+         margin-bottom:5%;
+     }
+ 
+     #Contact{
+        margin-top:950%;
+        margin-bottom: 10%;
+     }
+}
+
+
+@media (min-width:400px) and (max-width:420px){
+
+    #Services{
+        height: 100%; 
+     }
+     
+    #homePage{
+        margin-bottom:5%;
+    } 
+    #Contact{
+        margin-top:950%;
+       margin-bottom: 10%;
+    }
 }

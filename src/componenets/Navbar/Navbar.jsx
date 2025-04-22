@@ -12,14 +12,23 @@ const Navbar = () => {
       >
       </motion.span>
       
-        <div className="social">
-            <a href="#"><img src='/facebook.png' alt="facebook"/></a>
-            <a href="#"><img src='/instagram.png' alt="instagram"/></a>
-            <a href="#"><img src='/github.png' alt="github"/></a>
-            <a href="#"><img src='/gmail.png' alt="gmail"/></a>
-            <a href="https://www.linkedin.com/in/sanket-ghogare/"><img src='/blinkdin.png' alt="linkdin"/></a>
-           
-        </div>
+      <div className="social">
+        <a href="https://www.facebook.com/share/1ASrdhKjZf/" target="_blank" rel="noopener noreferrer">
+          <img src='/facebook.png' alt="facebook" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src='/instagram.png' alt="instagram" />
+        </a>
+        <a href="https://github.com/Sanket-Ghogare" target="_blank" rel="noopener noreferrer">
+          <img src='/github.png' alt="github" />
+        </a>
+        <a href="mailto:sanketvghogare@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src='/gmail.png' alt="gmail" />
+        </a>
+        <a href="https://www.linkedin.com/in/sanket-ghogare/" target="_blank" rel="noopener noreferrer">
+          <img src='/blinkdin.png' alt="linkedin" />
+        </a>
+      </div>
    
     </div>
   )

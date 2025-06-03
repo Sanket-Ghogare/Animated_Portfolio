@@ -2,118 +2,235 @@ import React, { useRef } from "react";
 import "./Services.scss";
 import { motion, useInView } from "framer-motion";
 
-const variants = {
-  inital: {
-    x: -500,
-    // y:100,
+const containerVariants = {
+  hidden: {
     opacity: 0,
   },
-  animate: {
-    x: 0,
+  visible: {
     opacity: 1,
-    // y:0,
     transition: {
       duration: 0.5,
-      //   duration:1,
-      //   staggerChilen:0.1,
-      ease: "easeInOut",
+      staggerChildren: 0.3,
     },
   },
 };
+
+const itemVariants = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const boxVariants = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Services = () => {
   const ref = useRef();
-
   const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <motion.div
       className="services"
-      variants={variants}
-      initial="inital"
       ref={ref}
-      animate={"animate"}
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
     >
-      {/* <motion.div className="textContainer" variants={variants}>
-        <p >
-            I focus on helping your brand grow <br/> and move forward
-        </p>
-        <hr/>
-     </motion.div> */}
-      <br />
-      <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src="/people.png" alt="" />
-          <p>
-            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
-          </p>
-        </div>
-        {/* <div className="title">
-        <p><motion.b whileHover={{color:"orange"}}>For Your </motion.b><strong>Business.</strong></p>
-        <button>What to Do?</button>
-     </div> */}
-        <div className="title">
-          {/* <p><motion.b whileHover={{color:"orange"}}>For Your </motion.b><strong>Business.</strong></p> */}
-          <button>
-            {" "}
-            <h1>WORK EXPERIENCE</h1>
-          </button>
+      {/* Header Section */}
+      <motion.div className="header-section" variants={itemVariants}>
+        <div className="header-content">
+          <motion.div 
+            className="header-image"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <img src="/people.png" alt="Team" />
+          </motion.div>
+          <div className="header-text">
+            <motion.h1>
+              <motion.span whileHover={{ color: "#ff6b35" }}>Professional</motion.span> Experience
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              Crafting innovative solutions with cutting-edge technologies
+            </motion.p>
+          </div>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+
+      {/* Experience Cards */}
+      <motion.div className="experience-container" variants={itemVariants}>
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="experience-card"
+          variants={boxVariants}
+          whileHover={{ 
+            scale: 1.02,
+            boxShadow: "0 20px 40px rgba(255, 107, 53, 0.2)",
+            transition: { duration: 0.3 }
+          }}
         >
-          <h3>Software Engineer | Frontend Developer (React, Next.js)</h3>
-          <br />
-          <h4> Syngenta | December 2023 - December 2024</h4>
-          <br />
-          <ol>
-            <li>
-              Engineered scalable, high-performance user interfaces for the
-              SynGPT project and CloudFactory application using React.js, Redux,
-              and Tailwind CSS,decreasing response times by 30% and boosting
-              customer satisfaction ratings by 4.2/5.
-            </li>
-            <li>
-              Crafted React-based UI components for CloudFactory application
-              that streamlined request management for Amazon services, reducing
-              workflow time by 25% and improving user satisfaction scores.
-            </li>
-            <li>
-              Integrated RESTful APIs and optimized React components, ensuring
-              99.9% uptime, seamless real-time functionality, and improved
-              cross-platform compatibility.
-            </li>
-          </ol>
-          <button>View Details</button>
+          <div className="card-header">
+            <motion.div 
+              className="role-badge"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="badge-text">Full-Time</span>
+            </motion.div>
+            <h3>Software Engineer | Frontend Developer</h3>
+            <div className="company-info">
+              <h4>Syngenta</h4>
+              <span className="duration">December 2023 - December 2024</span>
+            </div>
+          </div>
+          
+          <div className="card-content">
+            <div className="tech-stack">
+              <span className="tech-tag">React.js</span>
+              <span className="tech-tag">Next.js</span>
+              <span className="tech-tag">Redux</span>
+              <span className="tech-tag">Tailwind CSS</span>
+            </div>
+            
+            <ul className="achievements">
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">🚀</span>
+                  Engineered scalable, high-performance user interfaces for SynGPT project and CloudFactory application, decreasing response times by <strong>30%</strong> and boosting customer satisfaction ratings to <strong>4.2/5</strong>.
+                </motion.div>
+              </li>
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">⚡</span>
+                  Crafted React-based UI components that streamlined request management for Amazon services, reducing workflow time by <strong>25%</strong> and improving user satisfaction scores.
+                </motion.div>
+              </li>
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">💎</span>
+                  Integrated RESTful APIs and optimized React components, ensuring <strong>99.9% uptime</strong>, seamless real-time functionality, and improved cross-platform compatibility.
+                </motion.div>
+              </li>
+            </ul>
+          </div>
+          
+          <motion.button 
+            className="view-details-btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Project Details
+          </motion.button>
         </motion.div>
 
         <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
+          className="experience-card"
+          variants={boxVariants}
+          whileHover={{ 
+            scale: 1.02,
+            boxShadow: "0 20px 40px rgba(255, 107, 53, 0.2)",
+            transition: { duration: 0.3 }
+          }}
         >
-          <h3> Software Engineer Intern | Full-Stack Developer</h3>
-          <h4> Syngenta | July 2023 - November 2023</h4>
-
-          <ol>
-            <li>
-              Created and deployed 12+ responsive, WCAG-compliant web pages for
-              a blog application using React.js and Next.js, ensuring seamless
-              navigation and enhanced user experience.
-            </li>
-            <li>
-              Conducted a detailed study of the correlation between UI changes
-              and user retention, analyzing 1,200+ user interactions which
-              facilitated strategic recommendations that increased daily active
-              users by 15% in two months.
-            </li>
-            <li>
-              Refactored 20+ React components into a scalable, reusable code
-              structure that reduced bundle size by 30% and improved application
-              load time by 25%.
-            </li>
-          </ol>
-          <button>View Details</button>
+          <div className="card-header">
+            <motion.div 
+              className="role-badge internship"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="badge-text">Internship</span>
+            </motion.div>
+            <h3>Software Engineer Intern | Full-Stack Developer</h3>
+            <div className="company-info">
+              <h4>Syngenta</h4>
+              <span className="duration">July 2023 - November 2023</span>
+            </div>
+          </div>
+          
+          <div className="card-content">
+            <div className="tech-stack">
+               <span className="tech-tag">UI/UX</span>
+              <span className="tech-tag">React.js</span>
+              <span className="tech-tag">Express js</span>
+              <span className="tech-tag">Node js</span>
+             
+            </div>
+            
+            <ul className="achievements">
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">🎨</span>
+                  Created and deployed <strong>12+</strong> responsive, WCAG-compliant web pages for a blog application, ensuring seamless navigation and enhanced user experience.
+                </motion.div>
+              </li>
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">📊</span>
+                  Conducted detailed study of UI changes and user retention, analyzing <strong>1,200+</strong> user interactions which increased daily active users by <strong>15%</strong> in two months.
+                </motion.div>
+              </li>
+              <li>
+                <motion.div 
+                  className="achievement-item"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="bullet">🔧</span>
+                  Refactored <strong>20+</strong> React components into scalable, reusable code structure that reduced bundle size by <strong>30%</strong> and improved load time by <strong>25%</strong>.
+                </motion.div>
+              </li>
+            </ul>
+          </div>
+          
+          <motion.button 
+            className="view-details-btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Project Details
+          </motion.button>
         </motion.div>
       </motion.div>
     </motion.div>

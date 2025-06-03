@@ -3,7 +3,7 @@ import './contact.scss';
 import emailjs from '@emailjs/browser';
 import { motion, useInView } from 'framer-motion';
 
-const varients = {
+const variants = {
   initial: {
     y: 500,
     opacity: 0
@@ -50,31 +50,39 @@ const Contact = () => {
   };
 
   return (
-    <motion.div className='contact' ref={ref} variants={varients} initial="initial" whileInView="animate">
-      <motion.div className='textarea' variants={varients}>
-        <motion.h1 className='h1' variants={varients}>Let's work <br /> together</motion.h1>
-        <motion.div className='item' variants={varients}>
+    <motion.div 
+      className='contact' 
+      ref={ref} 
+      variants={variants} 
+      initial="initial" 
+      whileInView="animate"
+    >
+      <motion.div className='textArea' variants={variants}>
+        <motion.h1 className='title' variants={variants}>
+          Let's work <br /> together
+        </motion.h1>
+        <motion.div className='contactItem' variants={variants}>
           <h2>Mail</h2>
           <span>sanketvghogare@gmail.com</span>
         </motion.div>
-        <motion.div className='item' variants={varients}>
+        <motion.div className='contactItem' variants={variants}>
           <h2>Address</h2>
-          <span className='span1'>At-Ganeshwadi Po-Pimpri Tal-Indapur Dist-Pune</span>
+          <span>At-Ganeshwadi Po-Pimpri Tal-Indapur Dist-Pune</span>
         </motion.div>
-        <motion.div className='item' variants={varients}>
+        <motion.div className='contactItem' variants={variants}>
           <h2>Phone</h2>
-          <span className='span2'>7028351913</span>
+          <span>7028351913</span>
         </motion.div>
       </motion.div>
 
-      <div className='form'>
+      <div className='formSection'>
         <motion.div
-          className='phone'
+          className='phoneIcon'
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
         >
-          <svg className='svg' viewBox="0 0 32.666 32.666">
+          <svg className='phoneSvg' viewBox="0 0 32.666 32.666">
             <motion.path
               strokeWidth={0.2}
               fill="none"
@@ -104,17 +112,40 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
+          className="contactForm"
         >
-           <input type='hidden' name='to_name' value='Sanket' />
-          <input type='text' className='text' placeholder='Name' name='from_name' required /><br />
-          <input type='email' className='text' placeholder='Email' name='reply_to' required /><br />
-          <textarea rows={8} className='text' placeholder='Message' name='message' /><br />
-          <button className='btn' type='submit'>
+          <input type='hidden' name='to_name' value='Sanket' />
+          <input 
+            type='text' 
+            className='formInput' 
+            placeholder='Name' 
+            name='from_name' 
+            required 
+          />
+          <input 
+            type='email' 
+            className='formInput' 
+            placeholder='Email' 
+            name='reply_to' 
+            required 
+          />
+          <textarea 
+            rows={6} 
+            className='formTextarea' 
+            placeholder='Message' 
+            name='message'
+            required
+          />
+          <button className='submitBtn' type='submit' disabled={status === 'submitting'}>
             {status === 'submitting' ? 'Submitting...' : 'Submit'}
           </button>
 
-          {status === 'success' && <p className='success-msg'>Message sent successfully!</p>}
-          {status === 'error' && <p className='error-msg'>Failed to send message. Please try again.</p>}
+          {status === 'success' && (
+            <p className='successMsg'>Message sent successfully!</p>
+          )}
+          {status === 'error' && (
+            <p className='errorMsg'>Failed to send message. Please try again.</p>
+          )}
         </motion.form>
       </div>
     </motion.div>

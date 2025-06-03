@@ -1,0 +1,327 @@
+// Breakpoints
+$mobile-small: 320px;
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$large-desktop: 1440px;
+
+// Mixins for responsive design
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile-small {
+    @media (max-width: #{$mobile - 1px}) { @content; }
+  }
+  @if $breakpoint == mobile {
+    @media (max-width: #{$tablet - 1px}) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: #{$tablet}) and (max-width: #{$laptop - 1px}) { @content; }
+  }
+  @if $breakpoint == laptop {
+    @media (min-width: #{$laptop}) and (max-width: #{$desktop - 1px}) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: #{$desktop}) { @content; }
+  }
+  @if $breakpoint == large-desktop {
+    @media (min-width: #{$large-desktop}) { @content; }
+  }
+}
+
+.test {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include respond-to(mobile) {
+    padding: 1.5rem 0.75rem;
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  @include respond-to(tablet) {
+    padding: 3rem 2rem;
+  }
+  
+  @include respond-to(laptop) {
+    padding: 4rem 2rem;
+  }
+  
+  @include respond-to(desktop) {
+    padding: 5rem 2rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @include respond-to(mobile) {
+      max-width: 100%;
+      padding: 0 0.5rem;
+    }
+    
+    @include respond-to(tablet) {
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    
+    @include respond-to(laptop) {
+      max-width: 900px;
+    }
+    
+    @include respond-to(desktop) {
+      max-width: 1100px;
+    }
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    
+    @include respond-to(mobile) {
+      margin-bottom: 2rem;
+      font-size: clamp(1.5rem, 6vw, 2.2rem);
+    }
+    
+    @include respond-to(tablet) {
+      margin-bottom: 2.5rem;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+  }
+
+  .skillsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    
+    @include respond-to(mobile) {
+      gap: 1rem;
+    }
+    
+    @include respond-to(tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    
+    @include respond-to(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    @include respond-to(large-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .skillItem {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    @include respond-to(mobile) {
+      padding: 1.25rem;
+      border-radius: 12px;
+    }
+    
+    @include respond-to(tablet) {
+      padding: 1.5rem;
+      border-radius: 14px;
+    }
+    
+    @include respond-to(laptop) {
+      padding: 1.75rem;
+    }
+    
+    @include respond-to(desktop) {
+      padding: 2rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      
+      @include respond-to(mobile) {
+        height: 3px;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      
+      @include respond-to(mobile) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+
+  .skillContent {
+    position: relative;
+    z-index: 2;
+    
+    .skillTitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+      
+      @include respond-to(mobile) {
+        margin-bottom: 0.5rem;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+      }
+      
+      @include respond-to(tablet) {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+      }
+    }
+
+    .skillDescription {
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: #718096;
+      line-height: 1.5;
+      margin: 0;
+      
+      @include respond-to(mobile) {
+        font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .skillNumber {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    z-index: 3;
+    
+    @include respond-to(mobile) {
+      width: 32px;
+      height: 32px;
+      font-size: 0.85rem;
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+    
+    @include respond-to(tablet) {
+      width: 36px;
+      height: 36px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Additional responsive utilities
+@media (max-width: 320px) {
+  .test {
+    .container {
+      padding: 0 0.25rem;
+    }
+    
+    .skillItem {
+      padding: 1rem;
+    }
+  }
+}
+
+// Landscape mobile orientation
+@media (max-height: 500px) and (orientation: landscape) {
+  .test {
+    min-height: auto;
+    padding: 2rem 1rem;
+    
+    .sectionTitle {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skillsList {
+      gap: 1rem;
+    }
+  }
+}
+
+// High DPI displays
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .test {
+    .skillItem {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      
+      &:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}
+
+// Accessibility - Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .test {
+    .skillItem {
+      transition: none;
+      
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .test {
+    .skillItem {
+      background: rgba(45, 55, 72, 0.95);
+      border-color: rgba(255, 255, 255, 0.1);
+      
+      .skillTitle {
+        color: #f7fafc;
+      }
+      
+      .skillDescription {
+        color: #cbd5e0;
+      }
+    }
+  }
+}

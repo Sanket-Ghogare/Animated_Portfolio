@@ -1,106 +1,310 @@
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    
+// Global Styles with Scroll Snap
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: #0c0c1d;
-    color: lightgray;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0c0c1d;
+  color: lightgray;
+  overflow-x: hidden;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-section{
+
+// Section Heights and Layout with Scroll Snap
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+  width: 100%;
+  position: relative;
+  
+  // Ensure each section takes full viewport
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-height {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  // Ensure each section takes full viewport
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Home Section - Preserve Original Design
+#HomePage {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  z-index: 10;
+  scroll-snap-align: start; // Ensure it snaps properly
+}
+
+// Parallax Sections - Lower z-index for smooth animations
+.parallax-section {
+  position: relative;
+  z-index: 1;
+  scroll-snap-align: center;
+  
+  // Ensure parallax sections don't interfere with content
+  &:nth-of-type(2) { // First parallax (skills)
+    z-index: 2;
+  }
+  
+  &:nth-of-type(4) { // Second parallax (projects)
+    z-index: 1;
+  }
+}
+
+// Experience Section
+#Experience {
+  background: linear-gradient(135deg, #0c0c1d 0%, #111132 50%, #1a1a2e 100%);
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  scroll-snap-align: center;
+}
+
+#Services {
+  margin-bottom: 5%;
+}
+
+// Projects Section
+#Projects {
+  background: linear-gradient(180deg, #111132, #0c0c1d);
+  position: relative;
+  z-index: 4;
+  padding: 2rem 0;
+  scroll-snap-align: center;
+}
+
+// Contact Section
+#Contact {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  z-index: 5;
+  padding: 2rem 0;
+  margin-top: 350%;
+  scroll-snap-align: end;
+}
+
+// Smooth scrolling enhancements
+section {
+  scroll-margin-top: 0;
+  position: relative;
+}
+
+// Prevent content overflow
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+// Z-index management for overlapping elements
+.sidebar {
+  z-index: 999;
+}
+
+.navbar {
+  z-index: 100;
+}
+
+// Responsive Design - Mobile First Approach
+
+// Extra Small Devices (360px - 370px)
+@media (min-width: 360px) and (max-width: 370px) {
+  #Services {
+    height: 100%;
+  }
+  
+  #HomePage {
+    margin-bottom: 5%;
+  }
+  
+  #Contact {
+    margin-top: 950%;
+    margin-bottom: 10%;
+  }
+  
+  section {
     height: 100vh;
-    scroll-snap-align: center;
-   
-}
-#Services{
-
-    margin-bottom:5%;
-}
-
-#Contact{
-     margin-top:350%;
+    padding: 1rem 0;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 0.5rem 0;
+  }
 }
 
-
-
-
-
-
-@media (min-width:360px) and (max-width:370px){
-    #Services{
-       height: 100%;
-    }
-    
-    #HomePage{
-        margin-bottom:5%;
-    }
-
-    #Contact{
-        margin-top:950%;
-        margin-bottom: 10%;
-    }
-    
-
+// Small Devices (370px - 390px)
+@media (min-width: 370px) and (max-width: 390px) {
+  #Services {
+    height: 100%;
+  }
+  
+  #HomePage {
+    margin-bottom: 5%;
+  }
+  
+  #Contact {
+    margin-top: 950%;
+    margin-bottom: 10%;
+  }
+  
+  section {
+    height: 100vh;
+    padding: 1rem 0;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 0.5rem 0;
+  }
 }
 
-@media (min-width:370px) and (max-width:390px){
-    #Services{
-       height: 100%;
-    }
-    
-    #HomePage{
-        margin-bottom:5%;
-    }
-
-    #Contact{
-        margin-top:950%;
-       margin-bottom: 10%;
-    }
-    
-
+// Medium Small Devices (390px - 400px)
+@media (min-width: 390px) and (max-width: 400px) {
+  #Services {
+    height: 100%;
+  }
+  
+  #HomePage {
+    margin-bottom: 5%;
+  }
+  
+  #Contact {
+    margin-top: 950%;
+    margin-bottom: 10%;
+  }
+  
+  section {
+    height: 100vh;
+    padding: 1rem 0;
+  }
 }
 
-@media (min-width:390px) and (max-width:400px){
-
-    #Services{
-        height: 100%;
-     }
-     
-     #HomePage{
-         margin-bottom:5%;
-     }
- 
-     #Contact{
-        margin-top:950%;
-        margin-bottom: 10%;
-     }
+// Medium Devices (400px - 420px)
+@media (min-width: 400px) and (max-width: 420px) {
+  #Services {
+    height: 100%;
+  }
+  
+  #HomePage {
+    margin-bottom: 5%;
+  }
+  
+  #Contact {
+    margin-top: 950%;
+    margin-bottom: 10%;
+  }
+  
+  section {
+    height: 100vh;
+    padding: 1rem 0;
+  }
 }
 
+// Standard Mobile (up to 480px)
+@media (max-width: 480px) {
+  .full-height {
+    min-height: 100vh;
+    padding: 0.5rem 0;
+  }
+  
+  #Projects,
+  #Contact {
+    padding: 0.5rem 0;
+  }
+  
+  section {
+    height: 100vh;
+  }
+}
 
-@media (min-width:400px) and (max-width:420px){
+// Tablet Portrait (481px - 768px)
+@media (min-width: 481px) and (max-width: 768px) {
+  .full-height {
+    min-height: 100vh;
+    padding: 1rem 0;
+  }
+  
+  #Experience {
+    padding: 0;
+  }
+  
+  #Projects,
+  #Contact {
+    padding: 1rem 0;
+  }
+  
+  section {
+    height: 100vh;
+  }
+}
 
-    #Services{
-        height: 100%; 
-     }
-     
-    #HomePage{
-        margin-bottom:5%;
-    } 
-    #Contact{
-        margin-top:950%;
-       margin-bottom: 10%;
-    }
+// Tablet Landscape (769px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+  section {
+    height: 100vh;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 1.5rem 0;
+  }
+}
+
+// Desktop Small (1025px - 1200px)
+@media (min-width: 1025px) and (max-width: 1200px) {
+  section {
+    height: 100vh;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+}
+
+// Desktop Large (1201px and up)
+@media (min-width: 1201px) {
+  section {
+    height: 100vh;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+}
+
+// High Resolution Displays
+@media (min-width: 1920px) {
+  section {
+    height: 100vh;
+  }
+  
+  .full-height {
+    min-height: 100vh;
+    padding: 3rem 0;
+  }
 }

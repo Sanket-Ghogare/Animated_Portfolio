@@ -11,30 +11,36 @@ const App = () => {
   return (
     <>
       <div>
-        <section id='HomePage'>
+        {/* Home Section */}
+        <section id='HomePage' className="full-height">
           <Navbar />
           <Heros />
         </section>
 
         <Sidebar />
 
-        <section className='p1'>
+        {/* Skills Parallax Section */}
+        <section className='parallax-section full-height'>
           <Parallax type="skills" />
         </section>
 
-        <section id='Experience'>
+        {/* Experience Section */}
+        <section id='Experience' className="full-height">
           <Services type="skills" />
         </section>
 
-        <section className='p1'>
+        {/* Projects Parallax Section */}
+        <section className='parallax-section full-height'>
           <Parallax type="projects" />
         </section>
 
-        <section id='Projects'>
+        {/* Projects Section */}
+        <section id='Projects' className="full-height">
           <Portfolio type='projects' />
         </section>
 
-        <section id='Contact'>
+        {/* Contact Section */}
+        <section id='Contact' className="full-height">
           <Contact type='Contact' />
         </section>
       </div>

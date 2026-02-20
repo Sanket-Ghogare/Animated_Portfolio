@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const Navbar = () => {
   const socialLinks = [
      {
-      href: "https://www.linkedin.com/in/sanket-ghogare/",
+      href: "https://www.linkedin.com/in/sanketghogare/",
       src: "/blinkdin.png",
       alt: "linkedin"
     },
